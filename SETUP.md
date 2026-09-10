@@ -1,73 +1,41 @@
-# changluya GitHub Profile README - Setup
+# changluya Profile README
 
-This repository is intended to be your GitHub profile repository.
+This is a compact GitHub profile inspired by Tw93's approach: **short positioning + project proof + automatic updates**, with a small amount of visual styling.
 
-## 1. Create the profile repository
+## Structure
 
-Create a **public** GitHub repository named exactly:
+- `README.md` — the profile page itself
+- `assets/header.svg` — lightweight local header artwork
+- `profile_config.json` — featured repository configuration
+- `build_readme.py` — updates stats, project stars, releases and recent public activity
+- `.github/workflows/update-profile.yml` — runs every 6 hours and on demand
 
-```text
-changluya
-```
+## Push the update
 
-GitHub will automatically render its root `README.md` on your profile page.
-
-## 2. Push these files
+If this repository is already cloned locally, replace the corresponding files and run:
 
 ```bash
-git init
 git add .
-git commit -m "feat: initialize GitHub profile"
-git branch -M main
-git remote add origin git@github.com:changluya/changluya.git
-git push -u origin main
+git commit -m "refactor: simplify GitHub profile"
+git push
 ```
 
-## 3. Enable GitHub Actions write access
+## GitHub Actions permissions
 
-The workflow uses `GITHUB_TOKEN` and `permissions: contents: write` to refresh the README automatically.
-
-If your account/repository policy blocks workflow writes, open:
+The workflow needs write permission to update `README.md`:
 
 ```text
 Repository Settings -> Actions -> General -> Workflow permissions
 ```
 
-and allow **Read and write permissions**.
+Select **Read and write permissions**.
 
-## 4. What updates automatically
+## Featured projects
 
-Every 6 hours the workflow refreshes:
+The default profile keeps only three projects to reduce noise:
 
-- GitHub followers
-- Total stars received by your non-fork public repositories
-- Total forks of your non-fork public repositories
-- Featured-project star/fork numbers
-- Latest GitHub Release for each featured repository
+- OpenReach — current AI Agent infrastructure direction
+- open-office-skill — Agent Skill / document capability
+- Studio-Vue — Java backend / full-stack engineering proof
 
-No personal access token is required for normal use.
-
-## 5. Customize featured projects
-
-Edit `profile_config.json`.
-
-The initial featured projects are:
-
-- OpenReach
-- open-office-skill
-- Studio-Vue
-- Java-Demos
-
-The forked `druid` repository is intentionally not highlighted because the profile is designed to emphasize your own engineering work.
-
-## 6. Local test
-
-```bash
-python3 build_readme.py
-```
-
-Unauthenticated GitHub API requests are rate-limited, so GitHub Actions is the recommended execution environment.
-
-## Design idea
-
-The structure borrows the useful parts of Tw93's profile approach — concise identity, project proof, stats and automatic updates — but is intentionally rewritten around your goal: **show technical capability first, projects second**.
+Edit `profile_config.json` whenever you want to change the featured set.

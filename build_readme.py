@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
-"""Refresh dynamic sections in the GitHub profile README.
-
-No third-party dependencies are required. The script uses GitHub's REST API
-and the repository-provided GITHUB_TOKEN when executed from GitHub Actions.
-"""
+"""Refresh the compact dynamic sections of changluya's GitHub profile README."""
 
 from __future__ import annotations
 
@@ -47,17 +43,15 @@ def replace_chunk(content: str, marker: str, chunk: str) -> str:
     return pattern.sub(replacement, content)
 
 
-def load_config():
+def load_config() -> dict:
     return json.loads(CONFIG.read_text(encoding="utf-8"))
 
 
-def fetch_owned_repositories(username: str):
-    repos = []
+def fetch_owned_repositories(username: str) -> list[dict]:
+    repos: list[dict] = []
     page = 1
     while True:
-        batch = api_get(
-            f"/users/{username}/repos?type=owner&sort=updated&per_page=100&page={page}"
-        )
+        batch = api_get(f"/users/{username}/repos?type=owner&sort=updated&per_page=100&page={page}")
         if not batch:
             break
         repos.extend(batch)
@@ -67,63 +61,31 @@ def fetch_owned_repositories(username: str):
     return repos
 
 
+def repo_index(repositories: list[dict]) -> dict[str, dict]:
+    return {repo["name"].lower(): repo for repo in repositories}
+
+
 def render_stats(user: dict, repositories: list[dict]) -> str:
     original = [repo for repo in repositories if not repo.get("fork")]
     stars = sum(repo.get("stargazers_count", 0) for repo in original)
     forks = sum(repo.get("forks_count", 0) for repo in original)
     followers = user.get("followers", 0)
-    return f"{followers:,} followers · {stars:,} stars · {forks:,} forks across public projects"
-
-
-def repo_index(repositories: list[dict]) -> dict[str, dict]:
-    return {repo["name"].lower(): repo for repo in repositories}
-
-
-def escape_html(value: str) -> str:
-    return (
-        value.replace("&", "&amp;")
-        .replace("<", "&lt;")
-        .replace(">", "&gt;")
-        .replace('"', "&quot;")
-    )
-
-
-def render_project(project: dict, repo: dict | None, username: str) -> str:
-    name = project["name"]
-    url = (repo or {}).get("html_url") or f"https://github.com/{username}/{name}"
-    summary = project.get("summary") or (repo or {}).get("description") or "Open-source project."
-    tags = " · ".join(f"<code>{escape_html(tag)}</code>" for tag in project.get("tags", []))
-
-    metrics = []
-    if repo:
-        metrics.append(f"⭐ {repo.get('stargazers_count', 0)}")
-        if repo.get("forks_count", 0):
-            metrics.append(f"Forks {repo['forks_count']}")
-    metric_text = " · ".join(metrics)
-    details = " · ".join(part for part in [tags, metric_text] if part)
-
-    return (
-        f'<td width="50%" valign="top">\n'
-        f'<h3><a href="{escape_html(url)}">{escape_html(name)}</a></h3>\n'
-        f'<p>{escape_html(summary)}</p>\n'
-        f'<p>{details}</p>\n'
-        f'</td>'
-    )
+    return f"**{followers:,} followers** · **{stars:,} stars** · **{forks:,} forks** across public projects"
 
 
 def render_featured_projects(config: dict, repositories: list[dict]) -> str:
+    username = config["github_username"]
     index = repo_index(repositories)
-    cards = [
-        render_project(project, index.get(project["name"].lower()), config["github_username"])
-        for project in config["featured_repositories"]
-    ]
-    rows = []
-    for i in range(0, len(cards), 2):
-        pair = cards[i : i + 2]
-        if len(pair) == 1:
-            pair.append('<td width="50%"></td>')
-        rows.append("<tr>\n" + "\n".join(pair) + "\n</tr>")
-    return "<table>\n" + "\n".join(rows) + "\n</table>"
+    lines: list[str] = []
+    for project in config["featured_repositories"]:
+        name = project["name"]
+        repo = index.get(name.lower())
+        url = (repo or {}).get("html_url") or f"https://github.com/{username}/{name}"
+        summary = project.get("summary") or (repo or {}).get("description") or "Open-source project"
+        tags = " ".join(f"`{tag}`" for tag in project.get("tags", []))
+        stars = (repo or {}).get("stargazers_count", 0)
+        lines.append(f"- **[{name}]({url})** — {summary} · {tags} · ⭐ {stars:,}")
+    return "\n".join(lines)
 
 
 def fetch_latest_release(username: str, repo_name: str):
@@ -137,36 +99,101 @@ def fetch_latest_release(username: str, repo_name: str):
 
 def render_releases(config: dict) -> str:
     username = config["github_username"]
-    releases = []
+    releases: list[dict] = []
     for project in config["featured_repositories"]:
         release = fetch_latest_release(username, project["name"])
-        if not release or release.get("prerelease") or release.get("draft"):
+        if not release or release.get("draft") or release.get("prerelease"):
             continue
         published = release.get("published_at") or release.get("created_at") or ""
         releases.append(
             {
                 "repo": project["name"],
-                "title": release.get("name") or release.get("tag_name") or "Release",
-                "tag": release.get("tag_name") or "",
+                "label": release.get("name") or release.get("tag_name") or "Release",
                 "url": release.get("html_url") or f"https://github.com/{username}/{project['name']}/releases",
                 "published": published,
             }
         )
 
     releases.sort(key=lambda item: item["published"], reverse=True)
-    releases = releases[: int(config.get("release_limit", 6))]
+    releases = releases[: int(config.get("release_limit", 4))]
     if not releases:
-        return "No public releases found yet. Once a featured repository publishes a GitHub Release, this section will update automatically."
+        return "No public releases yet."
 
-    lines = []
-    for item in releases:
-        date = item["published"][:10] if item["published"] else ""
-        label = item["title"]
-        if item["tag"] and item["tag"].lower() not in label.lower():
-            label = f"{item['tag']} — {label}"
-        suffix = f" — {date}" if date else ""
-        lines.append(f"- **{item['repo']}** · [{label}]({item['url']}){suffix}")
-    return "\n".join(lines)
+    return "\n".join(
+        f"- [{item['repo']} · {item['label']}]({item['url']}) · {item['published'][:10]}"
+        for item in releases
+    )
+
+
+def event_description(event: dict, username: str) -> str | None:
+    event_type = event.get("type", "")
+    repo_name = (event.get("repo") or {}).get("name", "")
+    if not repo_name:
+        return None
+    short_repo = repo_name.split("/", 1)[-1]
+    repo_url = f"https://github.com/{repo_name}"
+    payload = event.get("payload") or {}
+
+    if event_type == "PushEvent":
+        commits = payload.get("commits") or []
+        if commits:
+            message = (commits[-1].get("message") or "").splitlines()[0].strip()
+            if len(message) > 42:
+                message = message[:39].rstrip() + "..."
+            if message:
+                return f"Pushed **{message}** to [{short_repo}]({repo_url})"
+        return f"Pushed code to [{short_repo}]({repo_url})"
+
+    if event_type == "ReleaseEvent":
+        release = payload.get("release") or {}
+        label = release.get("name") or release.get("tag_name") or "a release"
+        url = release.get("html_url") or repo_url
+        return f"Released [{label}]({url}) in **{short_repo}**"
+
+    if event_type == "PullRequestEvent":
+        action = payload.get("action", "updated")
+        pr = payload.get("pull_request") or {}
+        title = pr.get("title") or "pull request"
+        url = pr.get("html_url") or repo_url
+        return f"{action.capitalize()} PR [{title}]({url}) in **{short_repo}**"
+
+    if event_type == "CreateEvent":
+        ref_type = payload.get("ref_type", "item")
+        ref = payload.get("ref")
+        if ref:
+            return f"Created {ref_type} **{ref}** in [{short_repo}]({repo_url})"
+        if ref_type == "repository":
+            return f"Created repository [{short_repo}]({repo_url})"
+
+    if event_type == "IssuesEvent":
+        action = payload.get("action", "updated")
+        issue = payload.get("issue") or {}
+        title = issue.get("title") or "issue"
+        url = issue.get("html_url") or repo_url
+        return f"{action.capitalize()} issue [{title}]({url}) in **{short_repo}**"
+
+    return None
+
+
+def render_activity(config: dict) -> str:
+    username = config["github_username"]
+    events = api_get(f"/users/{username}/events/public?per_page=100")
+    limit = int(config.get("activity_limit", 5))
+    lines: list[str] = []
+    seen: set[str] = set()
+
+    for event in events:
+        description = event_description(event, username)
+        if not description or description in seen:
+            continue
+        seen.add(description)
+        created = (event.get("created_at") or "")[:10]
+        suffix = f" · {created}" if created else ""
+        lines.append(f"- {description}{suffix}")
+        if len(lines) >= limit:
+            break
+
+    return "\n".join(lines) if lines else "No recent public activity."
 
 
 def main() -> int:
@@ -180,6 +207,7 @@ def main() -> int:
         content = replace_chunk(content, "profile_stats", render_stats(user, repositories))
         content = replace_chunk(content, "featured_projects", render_featured_projects(config, repositories))
         content = replace_chunk(content, "latest_releases", render_releases(config))
+        content = replace_chunk(content, "recent_activity", render_activity(config))
     except Exception as exc:
         print(f"Profile refresh failed: {exc}", file=sys.stderr)
         return 1
