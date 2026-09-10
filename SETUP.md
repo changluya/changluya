@@ -1,41 +1,34 @@
-# changluya Profile README
+# Setup
 
-This is a compact GitHub profile inspired by Tw93's approach: **short positioning + project proof + automatic updates**, with a small amount of visual styling.
+这个目录可以直接作为 `changluya/changluya` GitHub Profile 仓库。
 
-## Structure
+## 使用
 
-- `README.md` — the profile page itself
-- `assets/header.svg` — lightweight local header artwork
-- `profile_config.json` — featured repository configuration
-- `build_readme.py` — updates stats, project stars, releases and recent public activity
-- `.github/workflows/update-profile.yml` — runs every 6 hours and on demand
-
-## Push the update
-
-If this repository is already cloned locally, replace the corresponding files and run:
+将本目录内容覆盖到现有 `changluya` 仓库后：
 
 ```bash
 git add .
-git commit -m "refactor: simplify GitHub profile"
+git commit -m "refactor: simplify profile"
 git push
 ```
 
-## GitHub Actions permissions
+## 自动更新
 
-The workflow needs write permission to update `README.md`:
+`.github/workflows/update-profile.yml` 每 12 小时刷新一次三个精选项目的 Star 数。
 
-```text
-Repository Settings -> Actions -> General -> Workflow permissions
-```
+也可以在 GitHub：
 
-Select **Read and write permissions**.
+`Actions -> Update profile -> Run workflow`
 
-## Featured projects
+手动触发。
 
-The default profile keeps only three projects to reduce noise:
+## 首页结构
 
-- OpenReach — current AI Agent infrastructure direction
-- open-office-skill — Agent Skill / document capability
-- Studio-Vue — Java backend / full-stack engineering proof
+只保留四层：
 
-Edit `profile_config.json` whenever you want to change the featured set.
+1. 一句话定位
+2. 核心技术栈
+3. 三个精选开源项目
+4. 当前技术关注方向
+
+完整技术栈默认折叠，避免首页过长。

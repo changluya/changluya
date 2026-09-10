@@ -1,22 +1,8 @@
 {
-  "github_username": "changluya",
+  "github_user": "changluya",
   "featured_repositories": [
-    {
-      "name": "OpenReach",
-      "summary": "Web access infrastructure for AI Agents",
-      "tags": ["Java", "Spring Boot", "Agent Infrastructure"]
-    },
-    {
-      "name": "open-office-skill",
-      "summary": "Office document skill for AI Agents",
-      "tags": ["Python", "Agent Skills", "Documents"]
-    },
-    {
-      "name": "Studio-Vue",
-      "summary": "Full-stack RBAC system and Java backend practice",
-      "tags": ["Java", "Spring Boot", "Vue"]
-    }
-  ],
-  "release_limit": 4,
-  "activity_limit": 5
+    "OpenReach",
+    "open-office-skill",
+    "Studio-Vue"
+  ]
 }

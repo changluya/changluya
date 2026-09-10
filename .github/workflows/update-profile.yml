@@ -1,15 +1,9 @@
-name: Update Profile README
+name: Update profile
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 */6 * * *"
-  push:
-    branches: [main]
-    paths:
-      - "build_readme.py"
-      - "profile_config.json"
-      - ".github/workflows/update-profile.yml"
+    - cron: "17 */12 * * *"
 
 permissions:
   contents: write
@@ -18,23 +12,21 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - name: Refresh README
+      - name: Refresh project stars
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python build_readme.py
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/update_profile.py
 
       - name: Commit changes
         run: |
           if git diff --quiet; then
-            echo "README is already up to date."
+            echo "No changes"
             exit 0
           fi
           git config user.name "github-actions[bot]"

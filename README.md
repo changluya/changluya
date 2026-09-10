@@ -1,60 +1,48 @@
-<p align="center">
-  <img src="./assets/header.svg" width="100%" alt="Changlu — Java Backend & AI Agent Engineer" />
-</p>
+<div align="center">
 
-Hey! I'm **Changlu**, a **Java Backend & AI Agent Engineer** focused on turning LLM capabilities into reliable software — especially **Agent Runtime, tools, sandbox execution and developer infrastructure**.
+<img src="./assets/header.svg" width="100%" alt="Changlu GitHub Profile" />
 
-<!-- profile_stats starts -->
-**0 followers** · **11 stars** · **1 fork** across public projects
-<!-- profile_stats ends -->
+<br/>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Java-17+-111827?logo=openjdk&logoColor=white" alt="Java" />
-  <img src="https://img.shields.io/badge/Spring_Boot-111827?logo=springboot&logoColor=6DB33F" alt="Spring Boot" />
-  <img src="https://img.shields.io/badge/AI_Agent-ReAct_·_Tools_·_RAG-111827" alt="AI Agent" />
-  <img src="https://img.shields.io/badge/Docker-111827?logo=docker&logoColor=2496ED" alt="Docker" />
-  <img src="https://img.shields.io/badge/Electron-111827?logo=electron&logoColor=9FEAF9" alt="Electron" />
-  <img src="https://img.shields.io/badge/Python-111827?logo=python&logoColor=FFD43B" alt="Python" />
-</p>
+**Java Backend · AI Agent · Developer Tools**
 
-### Building
+Building reliable Agent infrastructure and practical open-source tools.
 
-<!-- featured_projects starts -->
-- **[OpenReach](https://github.com/changluya/OpenReach)** — Web access infrastructure for AI Agents · `Java` `Spring Boot` `Agent Infrastructure` · ⭐ 3
-- **[open-office-skill](https://github.com/changluya/open-office-skill)** — Office document skill for AI Agents · `Python` `Agent Skills` `Documents` · ⭐ 1
-- **[Studio-Vue](https://github.com/changluya/Studio-Vue)** — Full-stack RBAC system and Java backend practice · `Java` `Spring Boot` `Vue` · ⭐ 6
-<!-- featured_projects ends -->
+[GitHub](https://github.com/changluya) · [Blog](https://changlu.blog.csdn.net/)
 
-<table>
-<tr>
-<td width="50%" valign="top">
+</div>
 
-### Latest Releases
+---
 
-<!-- latest_releases starts -->
-No public releases yet.
-<!-- latest_releases ends -->
+## Stack
 
-</td>
-<td width="50%" valign="top">
+`Java` · `Spring Boot` · `AI Agent` · `Python` · `Docker` · `Electron` · `Vue`
 
-### Recent Activity
+<details>
+<summary>More</summary>
 
-<!-- recent_activity starts -->
-GitHub Actions will refresh recent public activity automatically.
-<!-- recent_activity ends -->
+<br/>
 
-</td>
-</tr>
-</table>
+**Agent** — ReAct · Tool Calling · Agent Skills · RAG · MCP · LangChain4j · LangGraph  
+**Data** — MySQL · PostgreSQL · Redis · SQLite · Milvus  
+**Infra** — Linux · Nginx · Sandbox · SSE · Git Worktree
 
-### Focus
+</details>
 
-`Agent Runtime` · `Tool Calling` · `Agent Skills` · `Sandbox` · `Context Engineering` · `Developer Tools`
+## Open Source
 
-<p align="center">
-  <a href="https://github.com/changluya">GitHub</a> ·
-  <a href="https://changlu.blog.csdn.net">Blog</a>
-</p>
+<!-- PROJECTS_START -->
+| Project | What it does | Stack |
+| --- | --- | --- |
+| [**OpenReach**](https://github.com/changluya/OpenReach) ⭐ 3 | Web access infrastructure for AI Agents | `Java` `Spring Boot` |
+| [**open-office-skill**](https://github.com/changluya/open-office-skill) ⭐ 1 | Office document processing Skill for Agents | `Python` `Agent Skill` |
+| [**Studio-Vue**](https://github.com/changluya/Studio-Vue) ⭐ 6 | Spring Boot + Vue RBAC management system | `Java` `Vue` |
+<!-- PROJECTS_END -->
 
-<p align="center"><sub>Profile data is refreshed automatically by GitHub Actions.</sub></p>
+## Focus
+
+`Agent Runtime` · `Tool Calling` · `Sandbox` · `Context Engineering`
+
+<div align="right">
+<sub>Profile data refreshed automatically by GitHub Actions.</sub>
+</div>
