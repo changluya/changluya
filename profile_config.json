@@ -1,0 +1,26 @@
+{
+  "github_username": "changluya",
+  "featured_repositories": [
+    {
+      "name": "OpenReach",
+      "summary": "Open-source Web access infrastructure for AI Agents, providing unified Search, Image Search, Web Read and Safe Curl capabilities with multi-provider fallback.",
+      "tags": ["Java", "Spring Boot", "Agent Infrastructure"]
+    },
+    {
+      "name": "open-office-skill",
+      "summary": "Open-source Office document processing Skill for AI Agents and Sandboxes, supporting DOCX, PPTX, XLSX, PDF, conversion and rendering.",
+      "tags": ["Python", "Agent Skills", "Documents"]
+    },
+    {
+      "name": "Studio-Vue",
+      "summary": "Spring Boot + Vue management system with Spring Security, JWT authentication and dynamic RBAC permissions.",
+      "tags": ["Java", "Spring Boot", "Vue"]
+    },
+    {
+      "name": "Java-Demos",
+      "summary": "A collection of practical Java examples, including Spring Boot integrations and Spring Cloud demos.",
+      "tags": ["Java", "Spring Boot", "Spring Cloud"]
+    }
+  ],
+  "release_limit": 6
+}
