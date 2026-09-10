@@ -1,9 +1,5 @@
 <div align="center">
 
-<img src="./assets/header.svg" width="100%" alt="Changlu GitHub Profile" />
-
-<br/>
-
 **Java Backend · AI Agent · Developer Tools**
 
 Building reliable Agent infrastructure and practical open-source tools.
