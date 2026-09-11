@@ -14,7 +14,7 @@ git push
 
 ## 自动更新
 
-`.github/workflows/update-profile.yml` 每 12 小时刷新一次三个精选项目的 Star 数。
+`.github/workflows/update-profile.yml` 每 12 小时刷新一次四个精选项目的 Star 数。
 
 也可以在 GitHub：
 
@@ -28,7 +28,7 @@ git push
 
 1. 一句话定位
 2. 核心技术栈
-3. 三个精选开源项目
+3. 四个精选开源项目
 4. 当前技术关注方向
 
 完整技术栈默认折叠，避免首页过长。

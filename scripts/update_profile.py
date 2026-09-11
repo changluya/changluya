@@ -27,6 +27,7 @@ def get_json(url):
         return json.loads(resp.read().decode("utf-8"))
 
 descriptions = {
+    "ai-practice-guide": ("Runnable AI engineering tutorials for LLM, Speech, RAG, Agent & MCP", "`Java` `Spring Boot` `AI`"),
     "OpenReach": ("Web access infrastructure for AI Agents", "`Java` `Spring Boot`"),
     "open-office-skill": ("Office document processing Skill for Agents", "`Python` `Agent Skill`"),
     "Studio-Vue": ("Spring Boot + Vue RBAC management system", "`Java` `Vue`"),

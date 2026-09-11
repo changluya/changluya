@@ -2,7 +2,7 @@
 
 **Java Backend · AI Agent · Developer Tools**
 
-Building reliable Agent infrastructure and practical open-source tools.
+Building reliable Agent infrastructure, reusable AI tools, and runnable engineering guides.
 
 [GitHub](https://github.com/changluya) · [Blog](https://changlu.blog.csdn.net/)
 
@@ -30,6 +30,7 @@ Building reliable Agent infrastructure and practical open-source tools.
 <!-- PROJECTS_START -->
 | Project | What it does | Stack |
 | --- | --- | --- |
+| [**ai-practice-guide**](https://github.com/changluya/ai-practice-guide) ⭐ 1 | Runnable AI engineering tutorials for LLM, Speech, RAG, Agent & MCP | `Java` `Spring Boot` `AI` |
 | [**OpenReach**](https://github.com/changluya/OpenReach) ⭐ 3 | Web access infrastructure for AI Agents | `Java` `Spring Boot` |
 | [**open-office-skill**](https://github.com/changluya/open-office-skill) ⭐ 1 | Office document processing Skill for Agents | `Python` `Agent Skill` |
 | [**Studio-Vue**](https://github.com/changluya/Studio-Vue) ⭐ 6 | Spring Boot + Vue RBAC management system | `Java` `Vue` |
@@ -37,7 +38,7 @@ Building reliable Agent infrastructure and practical open-source tools.
 
 ## Focus
 
-`Agent Runtime` · `Tool Calling` · `Sandbox` · `Context Engineering`
+`AI Engineering` · `Agent Runtime` · `Tool Calling` · `Sandbox` · `Context Engineering`
 
 <div align="right">
 <sub>Profile data refreshed automatically by GitHub Actions.</sub>
