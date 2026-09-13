@@ -1,9 +1,26 @@
 {
   "github_user": "changluya",
-  "featured_repositories": [
-    "ai-practice-guide",
-    "OpenReach",
-    "open-office-skill",
-    "Studio-Vue"
+  "featured_repository_groups": [
+    {
+      "title": "Agent Framework & Infrastructure",
+      "repositories": [
+        "AgentForge",
+        "OpenReach"
+      ]
+    },
+    {
+      "title": "AI Engineering & Skills",
+      "repositories": [
+        "ai-practice-guide",
+        "open-office-skill"
+      ]
+    },
+    {
+      "title": "Applications & Platforms",
+      "repositories": [
+        "Studio-Vue",
+        "BlogLoom"
+      ]
+    }
   ]
 }

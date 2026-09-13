@@ -8,13 +8,13 @@
 
 ```bash
 git add .
-git commit -m "refactor: simplify profile"
+git commit -m "feat: update profile projects"
 git push
 ```
 
 ## 自动更新
 
-`.github/workflows/update-profile.yml` 每 12 小时刷新一次四个精选项目的 Star 数。
+`.github/workflows/update-profile.yml` 每 12 小时刷新一次精选项目的 Star 数，并保持 Open Source 区域的分类与排序。
 
 也可以在 GitHub：
 
@@ -24,11 +24,17 @@ git push
 
 ## 首页结构
 
-只保留四层：
+当前首页保持简洁，主要包含：
 
 1. 一句话定位
 2. 核心技术栈
-3. 四个精选开源项目
+3. 分类后的精选开源项目
 4. 当前技术关注方向
 
-完整技术栈默认折叠，避免首页过长。
+Open Source 当前分为三类：
+
+- **Agent Framework & Infrastructure**：AgentForge、OpenReach
+- **AI Engineering & Skills**：ai-practice-guide、open-office-skill
+- **Applications & Platforms**：Studio-Vue、BlogLoom
+
+其中 AgentForge 作为核心 Agent Framework 项目优先展示；BlogLoom 作为博客内容管理与发布平台放在应用类项目中。
