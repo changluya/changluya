@@ -46,7 +46,7 @@ Building reliable Agent infrastructure, reusable AI tools, and runnable engineer
 
 | Project | What it does | Stack |
 | --- | --- | --- |
-| [**Studio-Vue**](https://github.com/changluya/Studio-Vue) ⭐ 6 | Spring Boot + Vue RBAC management system | `Java` `Vue` `RBAC` |
+| [**Studio-Vue**](https://github.com/changluya/Studio-Vue) ⭐ 7 | Spring Boot + Vue RBAC management system | `Java` `Vue` `RBAC` |
 | [**BlogLoom**](https://github.com/changluya/BlogLoom) ⭐ 1 | One-stop blog content management and publishing platform with admin CMS and public site | `Spring Boot` `MyBatis` `Vue` |
 <!-- PROJECTS_END -->|||
 
