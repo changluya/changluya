@@ -26,11 +26,10 @@ git push
 
 当前首页保持简洁，主要包含：
 
-1. 顶部问候 + 一句话定位 + 联系方式（CSDN / Blog / Email / WeChat）
-2. 自我介绍（当前在做 AgentForge）
+1. 顶部问候 + 一句话定位 + 联系方式（CSDN / 个人站点 / Email / WeChat）
+2. 自我介绍（当前在做 AgentForge，并附最近关注方向）
 3. 核心技术栈
 4. 分类后的精选开源项目
-5. 当前技术关注方向
 
 Open Source 当前分为三类：
 

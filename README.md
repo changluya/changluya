@@ -17,7 +17,9 @@
 
 Java backend engineer focused on **AI engineering** — building reliable Agent infrastructure, reusable AI tools, and runnable engineering projects.
 
-Currently building **[AgentForge](https://github.com/changluya/AgentForge)**, an open-source AI Agent Framework & Platform, centered on Agent Runtime, Tool Calling, Sandbox, and Context Engineering.
+Currently building **[AgentForge](https://github.com/changluya/AgentForge)**, an open-source AI Agent Framework & Platform.
+
+Recently focused on `Agent Framework` · `LLM Abstraction` · `Agent Runtime` · `Tool Calling` · `Sandbox` · `Context Engineering`.
 
 ## Stack
 
@@ -58,10 +60,6 @@ Currently building **[AgentForge](https://github.com/changluya/AgentForge)**, an
 | [**Studio-Vue**](https://github.com/changluya/Studio-Vue) ⭐ 7 | Spring Boot + Vue RBAC management system | `Java` `Vue` `RBAC` |
 | [**BlogLoom**](https://github.com/changluya/BlogLoom) ⭐ 1 | One-stop blog content management and publishing platform with admin CMS and public site | `Spring Boot` `MyBatis` `Vue` |
 <!-- PROJECTS_END -->
-
-## Focus
-
-`Agent Framework` · `LLM Abstraction` · `Agent Runtime` · `Tool Calling` · `Sandbox` · `Context Engineering`
 
 <div align="right">
 <sub>Profile project data refreshed automatically by GitHub Actions.</sub>
