@@ -1,0 +1,25 @@
+README.md
+  s_635374fa764e29::t_7d4cc29e87197c 60
+  s_635374fa764e29::t_2ea6e9d410af0d 3,5,7-10,16-20
+  s_635374fa764e29::t_381217693e3ee4 21
+.gitignore
+  s_635374fa764e29::t_87648f5c22ad43 3
+SETUP.md
+  s_635374fa764e29::t_bb6534efd97dfe 29-33
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "de6e0e6e4972bdd09d4d89e13b6fbdb532640b24",
+  "prompts": {},
+  "sessions": {
+    "s_635374fa764e29": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_ef35c4e6dffe3nhtr5AOWQ0Lxo",
+        "model": "deepseek-flash"
+      },
+      "human_author": "changlu <939974883@qq.com>"
+    }
+  }
+}
