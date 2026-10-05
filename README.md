@@ -1,14 +1,23 @@
 <div align="center">
 
+# Hi there, I'm changlu 👋
+
 **Java Backend · AI Agent · Developer Tools**
 
-Building reliable Agent infrastructure, reusable AI tools, and runnable engineering projects.
-
-[GitHub](https://github.com/changluya) · [Blog](https://changlu.blog.csdn.net/)
+📝 CSDN — [changlu.blog.csdn.net](https://changlu.blog.csdn.net/)  
+🌐 Blog — [blog.changlu.cloud](https://blog.changlu.cloud/)  
+📧 Email — [changlucode666@163.com](mailto:changlucode666@163.com)  
+💬 WeChat — `shiChangLuya`
 
 </div>
 
 ---
+
+## About
+
+Java backend engineer focused on **AI engineering** — building reliable Agent infrastructure, reusable AI tools, and runnable engineering projects.
+
+Currently building **[AgentForge](https://github.com/changluya/AgentForge)**, an open-source AI Agent Framework & Platform, centered on Agent Runtime, Tool Calling, Sandbox, and Context Engineering.
 
 ## Stack
 
@@ -48,7 +57,7 @@ Building reliable Agent infrastructure, reusable AI tools, and runnable engineer
 | --- | --- | --- |
 | [**Studio-Vue**](https://github.com/changluya/Studio-Vue) ⭐ 7 | Spring Boot + Vue RBAC management system | `Java` `Vue` `RBAC` |
 | [**BlogLoom**](https://github.com/changluya/BlogLoom) ⭐ 1 | One-stop blog content management and publishing platform with admin CMS and public site | `Spring Boot` `MyBatis` `Vue` |
-<!-- PROJECTS_END -->|||
+<!-- PROJECTS_END -->
 
 ## Focus
 
