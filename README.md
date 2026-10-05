@@ -5,7 +5,7 @@
 **Java Backend · AI Agent · Developer Tools**
 
 📝 CSDN — [changlu.blog.csdn.net](https://changlu.blog.csdn.net/)  
-🌐 Blog — [blog.changlu.cloud](https://blog.changlu.cloud/)  
+🌐 My Website — [blog.changlu.cloud](https://blog.changlu.cloud/)  
 📧 Email — [changlucode666@163.com](mailto:changlucode666@163.com)  
 💬 WeChat — `shiChangLuya`
 
