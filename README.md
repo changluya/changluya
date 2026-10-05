@@ -23,16 +23,17 @@ Recently focused on `Agent Framework` · `LLM Abstraction` · `Agent Runtime` ·
 
 ## Stack
 
-`Java` · `Spring Boot` · `AI Agent` · `Python` · `Docker` · `Electron` · `Vue`
+`Java` · `Spring Boot` · `AI Agent` · `Vue` · `Python` · `Docker`
 
 <details>
 <summary>More</summary>
 
 <br/>
 
-**Agent** — LLM · ReAct · Tool Calling · Agent Skills · RAG · MCP · LangChain4j · LangGraph  
-**Data** — MySQL · PostgreSQL · Redis · SQLite · Milvus  
-**Infra** — Linux · Nginx · Sandbox · SSE · Git Worktree
+**Backend** — Spring Cloud · MyBatis · Netty · JUC · JVM  
+**AI Agent** — LLM · ReAct · Tool Calling · Agent Skills · RAG · MCP · LangChain4j · LangGraph  
+**Frontend** — Vue · Electron  
+**Data & Infra** — MySQL · Redis · Milvus · Linux · Nginx · Sandbox · SSE
 
 </details>
 
