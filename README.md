@@ -59,7 +59,7 @@ Recently focused on `Agent Framework` · `LLM Abstraction` · `Agent Runtime` ·
 | Project | What it does | Stack |
 | --- | --- | --- |
 | [**Studio-Vue**](https://github.com/changluya/Studio-Vue) ⭐ 7 | Spring Boot + Vue RBAC management system | `Java` `Vue` `RBAC` |
-| [**BlogLoom**](https://github.com/changluya/BlogLoom) ⭐ 1 | One-stop blog content management and publishing platform with admin CMS and public site | `Spring Boot` `MyBatis` `Vue` |
+| [**BlogLoom**](https://github.com/changluya/BlogLoom) ⭐ 2 | One-stop blog content management and publishing platform with admin CMS and public site | `Spring Boot` `MyBatis` `Vue` |
 <!-- PROJECTS_END -->
 
 <div align="right">
