@@ -17,7 +17,11 @@
 
 Java backend engineer focused on **AI engineering** — building reliable Agent infrastructure, reusable AI tools, and runnable engineering projects.
 
-Currently building **[AgentForge](https://github.com/changluya/AgentForge)**, an open-source AI Agent Framework & Platform.
+<!-- PROJECTS_START -->
+I founded the [AgentForge organization](https://github.com/agentforge-tech); my open-source work spans Agent Framework & Infrastructure, AI Engineering & Skills, and Applications & Platforms. Under AgentForge I maintain [**AgentForge**](https://github.com/agentforge-tech/AgentForge), a Java-first AI Agent framework, together with two open-sourced Skills, [**OpenReach**](https://github.com/agentforge-tech/OpenReach) and [**open-office-skill**](https://github.com/agentforge-tech/open-office-skill). I also build [**BlogLoom**](https://github.com/changluya/BlogLoom), my own blog content management and publishing system.
+
+I also contribute to [DTStack/SqlParserX](https://github.com/DTStack/SqlParserX), a Java SQL parser built on Druid, working on multi-dialect parsing, table and column lineage, and SQL rewriting.
+<!-- PROJECTS_END -->
 
 Recently focused on `Agent Framework` · `LLM Abstraction` · `Agent Runtime` · `Tool Calling` · `Sandbox` · `Context Engineering`.
 
@@ -36,32 +40,3 @@ Recently focused on `Agent Framework` · `LLM Abstraction` · `Agent Runtime` ·
 **Data & Infra** — MySQL · Redis · Milvus · Linux · Nginx · Sandbox · SSE
 
 </details>
-
-## Open Source
-
-<!-- PROJECTS_START -->
-### Agent Framework & Infrastructure
-
-| Project | What it does | Stack |
-| --- | --- | --- |
-| [**AgentForge**](https://github.com/changluya/AgentForge) ⭐ 2 | Java-first Agent framework built bottom-up from LLM abstractions toward production-ready Agent Runtime | `Java` `LLM` `Agent Framework` |
-| [**OpenReach**](https://github.com/changluya/OpenReach) ⭐ 4 | Web access infrastructure for AI Agents with unified search and web reading capabilities | `Java` `Spring Boot` `Agent Infra` |
-
-### AI Engineering & Skills
-
-| Project | What it does | Stack |
-| --- | --- | --- |
-| [**ai-practice-guide**](https://github.com/changluya/ai-practice-guide) ⭐ 1 | Runnable AI engineering tutorials for LLM, Speech, RAG, Agent & MCP | `Java` `Spring Boot` `AI` |
-| [**open-office-skill**](https://github.com/changluya/open-office-skill) ⭐ 1 | Office document processing Skill for Agents | `Python` `Agent Skill` |
-
-### Applications & Platforms
-
-| Project | What it does | Stack |
-| --- | --- | --- |
-| [**Studio-Vue**](https://github.com/changluya/Studio-Vue) ⭐ 7 | Spring Boot + Vue RBAC management system | `Java` `Vue` `RBAC` |
-| [**BlogLoom**](https://github.com/changluya/BlogLoom) ⭐ 3 | One-stop blog content management and publishing platform with admin CMS and public site | `Spring Boot` `MyBatis` `Vue` |
-<!-- PROJECTS_END -->
-
-<div align="right">
-<sub>Profile project data refreshed automatically by GitHub Actions.</sub>
-</div>
