@@ -44,8 +44,8 @@ Recently focused on `Agent Framework` · `LLM Abstraction` · `Agent Runtime` ·
 
 | Project | What it does | Stack |
 | --- | --- | --- |
-| [**AgentForge**](https://github.com/changluya/AgentForge) ⭐ 1 | Java-first Agent framework built bottom-up from LLM abstractions toward production-ready Agent Runtime | `Java` `LLM` `Agent Framework` |
-| [**OpenReach**](https://github.com/changluya/OpenReach) ⭐ 3 | Web access infrastructure for AI Agents with unified search and web reading capabilities | `Java` `Spring Boot` `Agent Infra` |
+| [**AgentForge**](https://github.com/changluya/AgentForge) ⭐ 2 | Java-first Agent framework built bottom-up from LLM abstractions toward production-ready Agent Runtime | `Java` `LLM` `Agent Framework` |
+| [**OpenReach**](https://github.com/changluya/OpenReach) ⭐ 4 | Web access infrastructure for AI Agents with unified search and web reading capabilities | `Java` `Spring Boot` `Agent Infra` |
 
 ### AI Engineering & Skills
 
