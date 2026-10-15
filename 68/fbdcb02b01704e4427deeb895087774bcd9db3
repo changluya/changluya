@@ -1,0 +1,34 @@
+scripts/update_profile.py
+  s_a1e89a7d2a80a6::t_728f1bede30068 15,25,27-28
+  s_a1e89a7d2a80a6::t_05e69dc78b7c38 13-14,29
+  s_211a6487930203::t_ca0e718d10085b 18-24
+  s_a1e89a7d2a80a6::t_35cb4598c58407 16-17,26
+README.md
+  s_211a6487930203::t_abfe9037a82a9b 21
+  s_211a6487930203::t_2cf8a8a366d636 22
+  s_211a6487930203::t_9c76bd80a4ffda 20,23-24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "68fbdcb02b01704e4427deeb895087774bcd9db3",
+  "prompts": {},
+  "sessions": {
+    "s_211a6487930203": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_ec204ce6dffeh9hmTTf5MQbPAv",
+        "model": "deepseek-v4.1-flash"
+      },
+      "human_author": "changlu <939974883@qq.com>"
+    },
+    "s_a1e89a7d2a80a6": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a13d8c-d848-7680-ad2a-972795c6d745",
+        "model": "gpt-6-luna"
+      },
+      "human_author": null
+    }
+  }
+}
